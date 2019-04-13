@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Dokdo|Noto+Sans+TC" rel="stylesheet">
+
+    <!-- CSS套用順序  !important(強制套用) > 行內 > 頁面內的 > 外部檔案 (與下方body相對照) -->
+    <style>
+        /* color 文字顏色 */
+        h2{
+           color: blue !important; 
+        }
+        /* class(分類); '.' +定義的分類名稱=行內設定class會來吃這邊的屬性 */
+        .blue{
+            color: blue !important;
+        }
+        /* font-size 文字大小 */
+        .big{
+            font-size: 100px;
+        }
+        /* font-style italic 文字斜體 */
+        .italic{
+            font-style: italic;
+        }
+        /* font-weight bold 文字粗體  bolder 加粗 (h1本身有加粗屬性) */
+        .bold{
+            font-weight: bold
+        }
+        /* *星號代表網頁所有東西 */
+        /* (通常後面都會加中文微軟正黑體，或者可參考google font字體) */
+        *{
+            font-family: 'Dokdo','cursive','Noto Sans TC','sans-serif';
+        }
+        /* text-align : center文字置中  left文字至左  right文字置右 */
+        .center{
+            text-align: center
+        }
+        /* 同時符合兩個class */
+        .blue.center{
+            /* overline上面的線 line-through刪除線 underline底線*/
+            text-decoration: line-through
+        }
+        a{
+            text-decoration: none;
+        }
+        a :hover{
+            /* 滑鼠移到連結上所顯示的顏色 */
+            color: tomato;
+        }
+        a :visited{
+            /* 點選過的顏色 */
+            color: violet;
+        }
+        a :active{
+            /* 作用中的連結的顏色(點擊) */
+            color: yellowgreen;
+        }
+        .shadow{
+            /* text-shadow 水平距離 垂直距離 模糊距離 顏色  */
+            text-shadow: 0px 0px 100px red
+        }
+        p:hover{
+            /* font-size: 130px; */
+            text-shadow: 0px 0px 100px yellow
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 字 顏色格式 
+        名稱 / #rgb / #rrggbb / #rgb(0~255,0~255,0~255) / rgba(0~255,0~255,0~255,0.0~1.0) -->
+    <h1 style="color: rgb(247, 222, 3)">Hello</h1>
+    <h2>dfdsfewsfdvdfgfdd</h2>
+    <h2 style="color:blueviolet">dwewdswfdew</h2>
+
+    <!-- /* .代表class(分類) class裡面填寫上方設定的類別 */ -->
+    <h2 class="blue big">123456</h2>
+    
+    <!-- 依上方方式套用，文字變得又大又斜 -->
+    <h3 class="italic big">hello guys</h3>
+
+    <!-- 依上方方式套用，文字變粗 -->
+    <p class="bold big blue">中文字</p>
+    <a href="https://www.google.com">google</a>
+
+</body>
+</html>
